@@ -3,9 +3,18 @@
 <head>
     <style>
        
-        table#cadastro{border: 5px solid rgb(226, 23, 57); margin: auto; }
+        table#cadastro{border: 2px solid rgb(8, 61, 63); margin: auto;padding: 10px;background-color: blanchedalmond;}
         
-        td#texto {width: 25%; text-align: right; }
+        td#texto {width: 15%; text-align: right; padding: 10px;}
+         
+        td#campos {width:35%; text-align: left;}
+ 
+        td#titulo {text-align: left;font-size: 20px; }
+
+        input {box-shadow: 3px 3px 5px black;background-color: darkgrey;padding: 5px 20px;}
+        
+        button {background-color: rgb(15, 114, 15);padding: 10px 40px;}
+        
 
     
     </style>
@@ -37,18 +46,18 @@
             </tr>
 
             <tr>
-                <td colspan="2" id="campos">Dados cadastrais</td>
+                <td  colspan="2" id="titulo">Dados cadastrais</td>
                
-                <td colspan="2" id="campos">Endereço de entrega</td>
+                <td colspan="2" id="titulo">Endereço de entrega</td>
  
      
             </tr>
             <tr>
            <td id="texto">  </td>
-           <td id="campos"><input type="radio" name="fcurso" value="PF" >Pessoa física
-                          <input type="radio" name="fcurso" value="PF" >Pessoa Jurídica </td>
+           <td id="campos"><input type="radio" name="ftipo" value="PF" >Pessoa física
+                            <input type="radio" name="ftipo" value="PF" >Pessoa Jurídica </td>
            <td id="texto">CEP</td>
-           <td id="campos"><input type="text"></td>  
+           <td id="campos"><input type="text" size="10"></td>  
 
            </tr>     
            <tr>
@@ -62,7 +71,7 @@
                 <td id="texto">Sobrenome*</td>
                 <td id="campos"><input type="text"></td>
                 <td id="texto">Número</td>
-                <td id="campos"><input type="text"></td>  
+                <td id="campos"><input type="text" size="6"></td>  
      
             </tr>  
             <tr>
@@ -78,28 +87,31 @@
             </tr>
             <tr>
                 <td id="texto">CPF*</td>
-                <td id="campos"><input type="text"></td>
+                <td id="campos"><input type="text"size="15" name="cpf" \
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                    title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                <input type="submit" value="Verificar"></td>
                 <td id="texto">Complemento</td>
-                <td id="campos"><input type="text"></td>  
+                <td id="campos"><input type="text" size="15"></td>  
      
             </tr> 
             <tr>
                 <td id="texto">Telefone *</td>
-                <td id="campos"><input type="text"></td>
+                <td id=""><input type="text" size="10"></td>
                 <td id="texto">Referência</td>
                 <td id="campos"><input type="text"></td>  
      
             </tr> 
             <tr>
                 <td id="texto">Celular</td>
-                <td id="campos"><input type="text"></td>
+                <td id=""><input type="text" size="10"></td>
                 <td id="texto">Bairro</td>
                 <td id="campos"><input type="text"></td>  
      
             </tr> 
             <tr>
                 <td id="texto">Nascimento</td>
-                <td id="campos"><input type="text"></td>
+                <td id="campos"><input type="date"></td>
                 <td id="texto">Cidade</td>
                 <td id="campos"><input type="text"></td>  
      
@@ -107,13 +119,42 @@
             <tr>
                 <td id="texto"></td>
                 <td id="campos"><input type="checkbox" name="" id="">Receber ofertas e novidades por e-mail</td>
-                <td id="texto">Estado</td>
-                <td id="campos"><input type="text"></td>  
+                <td id="texto">Estados</td>
+                <td id="campos"><select id="estado" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select></td>  
      
             </tr> 
             <tr>
                 <td id="texto"></td>
-                <td id="campos"> <button>Cadastrar> </button></td>
+                <td id="campos"> <button>Cadastrar> </button> </td>
                 <td id="texto"></td>
                 <td id="campos"></td>  
      
